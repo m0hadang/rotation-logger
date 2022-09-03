@@ -1,0 +1,2 @@
+cp _build/rotation-logger/librotation-logger.so example/
+g++ main.cc -std=c++17 -I../rotation-logger/include -L. librotation-logger.so
