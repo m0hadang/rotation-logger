@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "cmake generate",
+			"type": "shell",
+			"command": "cmake -B _build -G Ninja",
+			"options": {
+				"cwd": "${workspaceRoot}"
+			},
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "build project",
+			"type": "shell",
+			"command": "cmake --build _build",
+			"options": {
+				"cwd": "${workspaceRoot}"
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "run test",
+			"type": "shell",
+			"command": "cmake -P script/run_tester.cmake",
+			"problemMatcher": [],
+			"dependsOn": [
+				"build project"
+			]
+		}
+	]
+}

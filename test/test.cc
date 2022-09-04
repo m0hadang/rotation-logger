@@ -2,5 +2,5 @@
 #include <gtest/gtest.h>
 
 TEST(HELLO_GOOGLETEST, HELLO_GOOGLETEST) {
-  EXPECT_EQ(rotlogger::Add(1, 2), 3);
+  EXPECT_EQ(rotation_logger::Add(1, 2), 3);
 }
