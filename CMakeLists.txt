@@ -9,3 +9,7 @@ add_subdirectory(rotation-logger)
 add_subdirectory(googletest)
 add_subdirectory(example)
 add_subdirectory(test)
+execute_process(
+  COMMAND "${CMAKE_COMMAND}" -E make_directory "test_sandbox"
+  RESULT_VARIABLE result
+)
