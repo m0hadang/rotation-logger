@@ -2,7 +2,7 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "cmake generate",
+			"label": "generate cmake",
 			"type": "shell",
 			"command": "cmake -B _build -G Ninja",
 			"options": {
@@ -15,7 +15,7 @@
 			}
 		},
 		{
-			"label": "build project",
+			"label": "build system",
 			"type": "shell",
 			"command": "cmake --build _build",
 			"options": {
